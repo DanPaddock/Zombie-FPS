@@ -151,25 +151,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &88316679 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8943269241754169476, guid: f05cd787962da22448e5fb996335c18d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8943269240063782497}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &88316686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88316679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad6cadef7d0de149a7d8b481a4f9887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
 --- !u!4 &90808624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ab33e6080ae416b4d899f39fa8951b98,
@@ -1907,6 +1888,8 @@ MonoBehaviour:
   range: 100
   damage: 30
   muzzleFlash: {fileID: 1164217792}
+  hitEffect: {fileID: 9123050719877523283, guid: ce7427b439d025945b88f1fc01799d6b,
+    type: 3}
 --- !u!1001 &8943269240063782497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1974,20 +1957,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8943269241754169483, guid: f05cd787962da22448e5fb996335c18d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943269241754169483, guid: f05cd787962da22448e5fb996335c18d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8943269241754169482, guid: f05cd787962da22448e5fb996335c18d,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1328054322}
-    - target: {fileID: 8943269241754169482, guid: f05cd787962da22448e5fb996335c18d,
-        type: 3}
-      propertyPath: chaseRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943269241754169479, guid: f05cd787962da22448e5fb996335c18d,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f05cd787962da22448e5fb996335c18d, type: 3}
