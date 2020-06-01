@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
         HP -= Damage;
         if (HP <= 0)
         {
-            Debug.Log("You died... RIP");
+            GetComponent<DeathHandler>().handleDeath();
         }
     }
 }
