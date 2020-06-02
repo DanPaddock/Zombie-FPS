@@ -342,7 +342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742f7b87d3a13164a9cd4844f089525f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 100
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 100
+  - ammoType: 0
+    ammoAmount: 150
+  - ammoType: 1
+    ammoAmount: 30
 --- !u!1 &2261902807605062191
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6064279435612862328}
+  - component: {fileID: 7308503043043983417}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -376,6 +383,19 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7308503043043983417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261902807605062191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cec14423ab70554eb7c4076131754f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponID: 0
 --- !u!1001 &2798184268914900367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387,11 +407,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337074158997199750, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
         type: 3}
@@ -458,16 +473,6 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 841571737}
-    - target: {fileID: 6221942723046270764, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
-        type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221942723046270764, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
-        type: 3}
-      propertyPath: range
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c7b17a674ff3384cb070dd51f21e3ea, type: 3}
 --- !u!4 &485211547069610537 stripped
@@ -487,11 +492,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337074158997199750, guid: 5161d349ce8523940ac62ff9ece05ff6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: 5161d349ce8523940ac62ff9ece05ff6,
         type: 3}
@@ -558,21 +558,6 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 841571737}
-    - target: {fileID: 6221942723046270764, guid: 5161d349ce8523940ac62ff9ece05ff6,
-        type: 3}
-      propertyPath: damage
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221942723046270764, guid: 5161d349ce8523940ac62ff9ece05ff6,
-        type: 3}
-      propertyPath: rateOfFire
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221942723046270764, guid: 5161d349ce8523940ac62ff9ece05ff6,
-        type: 3}
-      propertyPath: range
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5161d349ce8523940ac62ff9ece05ff6, type: 3}
 --- !u!4 &516011415356684410 stripped
@@ -592,11 +577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carbine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
@@ -663,16 +643,6 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 841571737}
-    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
-        type: 3}
-      propertyPath: rateOfFire
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
-        type: 3}
-      propertyPath: range
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 4608984694573899772, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: fpsCamera

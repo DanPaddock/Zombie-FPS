@@ -12,9 +12,14 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float rateOfFire = 0.5f;
+    [SerializeField] AmmoType ammoType;
 
     bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot == true)
@@ -26,11 +31,11 @@ public class Weapon : MonoBehaviour
     IEnumerator ShootWeapon()
     {
         canShoot = false;
-        if(ammoSlot.GetCurrentAmmo() > 0)
+        if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
-            ammoSlot.ReduceCurrentAmmo();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(rateOfFire);
         canShoot = true;
@@ -46,7 +51,6 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
-            Debug.Log("Hit: " + hit.transform.name);
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null) return;
