@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 841571737}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ MonoBehaviour:
   ammoSlots:
   - ammoType: 0
     ammoAmount: 100
-  - ammoType: 0
+  - ammoType: 2
     ammoAmount: 150
   - ammoType: 1
     ammoAmount: 30
@@ -403,11 +403,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6064279435612862328}
     m_Modifications:
-    - target: {fileID: 2337074158997199750, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
-        type: 3}
-      propertyPath: m_Name
-      value: Pistol
-      objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,6 +458,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2337074158997199750, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol
+      objectReference: {fileID: 0}
     - target: {fileID: 6221942723046270764, guid: 8c7b17a674ff3384cb070dd51f21e3ea,
         type: 3}
       propertyPath: playerCamera
@@ -488,11 +488,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6064279435612862328}
     m_Modifications:
-    - target: {fileID: 2337074158997199750, guid: 5161d349ce8523940ac62ff9ece05ff6,
-        type: 3}
-      propertyPath: m_Name
-      value: Shotgun
-      objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: 5161d349ce8523940ac62ff9ece05ff6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -548,6 +543,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2337074158997199750, guid: 5161d349ce8523940ac62ff9ece05ff6,
+        type: 3}
+      propertyPath: m_Name
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 6221942723046270764, guid: 5161d349ce8523940ac62ff9ece05ff6,
         type: 3}
       propertyPath: playerCamera
@@ -573,11 +573,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6064279435612862328}
     m_Modifications:
-    - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Carbine
-      objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,16 +628,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
+    - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 2000000}
-    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
-        type: 3}
-      propertyPath: ammoSlot
-      value: 
-      objectReference: {fileID: 841571737}
+      propertyPath: m_Name
+      value: Carbine
+      objectReference: {fileID: 0}
     - target: {fileID: 4608984694573899772, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: fpsCamera
@@ -653,6 +643,16 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 11400004}
+    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 6221942723046270764, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 841571737}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
 --- !u!4 &6221942723045784331 stripped
