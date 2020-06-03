@@ -42,6 +42,7 @@ public class Weapon : MonoBehaviour
         canShoot = false;
         if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
+            GetComponentInParent<AudioSource>().Play();
             PlayMuzzleFlash();
             ProcessRaycast();
             ammoSlot.ReduceCurrentAmmo(ammoType);
