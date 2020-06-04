@@ -11,6 +11,8 @@ public class BatteryPickup : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            AudioSource audio = GetComponent<AudioSource>();
+            AudioSource.PlayClipAtPoint(audio.clip, transform.position);
             other.GetComponentInChildren<Flashlight>().RestoreLightAngle(restoreAngle);
             other.GetComponentInChildren<Flashlight>().RestoreLightIntensity(addIntensity);
             Destroy(gameObject);

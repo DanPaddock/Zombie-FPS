@@ -7,6 +7,8 @@ public class SceneLoader : MonoBehaviour
 {
     public void ReloadGame()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Stop();
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
