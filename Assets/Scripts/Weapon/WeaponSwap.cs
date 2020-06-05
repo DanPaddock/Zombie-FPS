@@ -13,6 +13,13 @@ public class WeaponSwap : MonoBehaviour
     void Start()
     {
         UI_Object = GameObject.Find("Gun Display Canvas");
+       /* GameObject Gun_One = GameObject.Find("Gun One");
+        GameObject Gun_Two = GameObject.Find("Gun Two");
+        GameObject Gun_Three = GameObject.Find("Gun Three");
+        UI_CircleChildren.Add(Gun_One);
+        UI_CircleChildren.Add(Gun_Two);
+        UI_CircleChildren.Add(Gun_Three);
+
         Debug.Log(UI_Object.transform);
         foreach (Transform child in UI_Object.transform)
         {
@@ -20,7 +27,7 @@ public class WeaponSwap : MonoBehaviour
             Debug.Log(child.GetChild(0).gameObject);
             UI_CircleChildren.Add(child.GetChild(0).gameObject);
             // UI_CircleChildren.Add(child.GetChild(0).gameObject);
-        }
+        }*/
         SetActiveWeapon();
     }
 
@@ -87,7 +94,7 @@ public class WeaponSwap : MonoBehaviour
             if (weaponIndex == currentWeaponID)
             {
                 weapon.gameObject.SetActive(true);
-                //SetGunUI(currentWeaponID);
+                SetGunUI(currentWeaponID);
             }
             else
             {
@@ -99,24 +106,30 @@ public class WeaponSwap : MonoBehaviour
 
     private void SetGunUI(int WeaponID)
     {
+        GameObject Gun_One = GameObject.Find("Gun One").transform.GetChild(0).gameObject;
+        GameObject Gun_Two = GameObject.Find("Gun Two").transform.GetChild(0).gameObject;
+        GameObject Gun_Three = GameObject.Find("Gun Three").transform.GetChild(0).gameObject;
         if (WeaponID == 0)
         {
-            UI_CircleChildren[0].gameObject.GetComponent<Image>().enabled = true;
-            UI_CircleChildren[1].gameObject.GetComponent<Image>().enabled = true;
-            UI_CircleChildren[2].gameObject.GetComponent<Image>().enabled = true;
-        }/*
+            Gun_One.SetActive(true);
+            Gun_Two.SetActive(false);
+            Gun_Three.SetActive(false);
+         //   UI_CircleChildren[0].gameObject.GetComponent<Image>().enabled = true;
+           // UI_CircleChildren[1].gameObject.GetComponent<Image>().enabled = true;
+            //UI_CircleChildren[2].gameObject.GetComponent<Image>().enabled = true;
+        }
         else if (WeaponID == 1)
         {
-            UI_CircleChildren[0].SetActive(false);
-            UI_CircleChildren[1].SetActive(true);
-            UI_CircleChildren[2].SetActive(false);
+            Gun_One.SetActive(false);
+            Gun_Two.SetActive(true);
+            Gun_Three.SetActive(false);
         }
         else
         {
-            UI_CircleChildren[0].SetActive(false);
-            UI_CircleChildren[1].SetActive(false);
-            UI_CircleChildren[2].SetActive(true);
-        }*/
+            Gun_One.SetActive(false);
+            Gun_Two.SetActive(false);
+            Gun_Three.SetActive(true);
+        }
 
     }
 }
